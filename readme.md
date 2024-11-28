@@ -6,6 +6,8 @@ The tool is simple, you can load in a set of unannotated or pre-annotated docume
 
 The json format is as follows:   
 An object with 2 keys: 'data', 'schema'.   
+
+
 data key contains a list of observations/documents, each observation is an object with 3 keys: 'tokens', 'spans', 'relations'.   
 - data[doc_idx].tokens key contains a list of strings, one string per word token.   
 - data[doc_idx].spans key contains a list of spans, each span is an object with 4 keys: 'id', 'start', 'end', 'type'.   
@@ -18,6 +20,8 @@ data key contains a list of observations/documents, each observation is an objec
 - data[doc_idx].relations[rel_idx].head key contains the head span id from the spans list.   
 - data[doc_idx].relations[rel_idx].tail key contains the tail span id from the spans list.    
 - data[doc_idx].relations[rel_idx].type key contains the relation type (from the set of relation type names in schema.relations_types).   
+
+
 schema key contains 2 keys: 'span_types', 'relation_types'.    
 - schema.span_types[span_type_idx].name key contains the unique span type name.   
 - schema.span_types[span_type_idx].color key contains the span type color as hex or rgba.   
